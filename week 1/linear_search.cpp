@@ -2,24 +2,17 @@
 using namespace std;
 int main()
 {
-    int t, n, j, i, key, flag = 0, index, comparison = 0;
-    cout << "Enter number of test cases : ";
+    int t, n, j, i, key, flag = 0, index, comparison;
     cin >> t;
     for (i = 0; i < t; i++)
     {
         flag = 0;
-        cout << endl
-             << "Enter number of element in the array : ";
+        comparison = 0;
         cin >> n;
         int a[n];
-        cout << endl
-             << "Enter elements in the array : ";
         for (j = 0; j < n; j++)
-        {
             cin >> a[j];
-        }
-        cout << endl
-             << "Enter key value : ";
+
         cin >> key;
         for (j = 0; j < n; j++)
         {
@@ -33,12 +26,11 @@ int main()
         }
         if (flag == 0)
             cout << endl
-                 << "Number Is not present in the array." << endl;
+                 << "Not Present " << comparison << endl;
         else
         {
             cout << endl
-                 << "Number is present in the array at index = " << index;
-            cout << "\n\nNumber of comparisions made = " << comparison << endl;
+                 << "Present " << comparison << endl;
         }
     }
     return 0;
